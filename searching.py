@@ -80,7 +80,9 @@ def test_complexity(list_of_n):
     plt.plot(list_of_n, time_linear)
     plt.plot(list_of_n, time_binary)
 
-def pattern_search():
+def pattern_search(sequency, pattern):
+    indices = {}
+    return indices
 
 
 
