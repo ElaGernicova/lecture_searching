@@ -28,10 +28,26 @@ def read_data(file_name, field):
     else:
         return None
 
+def linear_search(searched_data, searched_number):
+    count = 0
+    index = 0
+    position = []
+    searched_dictionary = {}
+    while index < len(searched_data):
+        if searched_data[index] == searched_number:
+            count += 1
+            position.append(index)
+        index+=1
+    searched_dictionary['position'] = position
+    searched_dictionary['count'] = count
+    return searched_dictionary
+
 
 def main():
     my_data = read_data("sequential.json",  "unordered_numbers" )
     print(my_data)
+    LS = linear_search(my_data, 3)
+    print(LS)
 
 if __name__ == "__main__":
     main()
